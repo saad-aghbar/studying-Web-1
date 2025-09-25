@@ -1,0 +1,81 @@
+
+<style>
+    .one{
+        background-color: whitesmoke;
+        border: solid;
+        border-color: green;
+        color: green;
+        cursor: pointer;
+        transition: padding-left 0.5s, padding-right 0.5s, color 0.5s, background-color 0.5s;
+
+    }
+
+    .one:hover{
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: green;
+        color: whitesmoke;
+    }
+
+    .stretch{
+        background-color: skyblue;
+        color: black;
+        border: solid;
+        border-color: black;
+        cursor: pointer;
+        font-size: 11px;
+        text-align: center;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        transition: padding-right 0.5s,
+        padding-bottom 0.5s,
+        color 0.5s,
+        background-color 0.5s,
+        font-size 0.5s;
+    }
+
+    .stretch:hover{
+        padding-right: 5px;
+        padding-bottom: 5px;
+        background-color: blue;
+        color: whitesmoke;
+        border: solid;
+        font-size: 20px;
+        border-color: black;
+    }
+
+    .thDclick{
+        background-color: green;
+        color: white;
+        border: none;
+        box-shadow: 5px 5px 5px black;
+        cursor: pointer;
+        transition: box-shadow 0.1s,
+        transform 0.1s;
+        border-radius: 5px;
+      }
+
+    .thDclick:hover{
+        box-shadow: 5px 3px 5px black;
+    }
+
+    .thDclick:active{
+        box-shadow: none;
+        transform: translate(2px, 2px);
+
+    }
+
+</style>
+
+
+<button class = "one">
+    one
+</button>
+
+<button class = "stretch">
+    stretch
+</button>
+
+<button class = "thDclick">
+    3dclick
+</button>

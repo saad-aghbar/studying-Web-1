@@ -12,7 +12,7 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #cac9c9;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .left-side{
@@ -21,13 +21,15 @@
 }
 
 .hamburger-menu{
-    height: 45px;
+    height: 48px;
     margin-right: 60px;
-    margin-left: 35px;
+    margin-left: 51px;
+    cursor: pointer;
 }
 
 .youtube-logo{
     height: 40px;
+    cursor: pointer;
 }
 
 .middle-side{
@@ -61,12 +63,11 @@
 
 .search-icon{
     height: 45px;
-    margin-top: 3px;
 }
+
 
 .voise-search-icon{
     height: 45px;
-    margin-top: 3px;
 }
 
 .search-button{
@@ -78,6 +79,39 @@
     background-color: rgb(241, 241, 241);
     margin-left: -2px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button,
+.voise-search-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-button .tooltip,
+.voise-search-button .tooltip{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Roboto;
+    font-size: 20px;
+    bottom: -35px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voise-search-button:hover .tooltip{
+    opacity: 1;
 }
 
 .voise-search-button{
@@ -88,6 +122,7 @@
     border-radius: 50px;
     margin-left: 15px;
 }
+
 .right-side{
     width: 400px;
     display: flex;
@@ -113,6 +148,7 @@
     height: 70px;
     margin-right: 20px;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 .notif-icon-contanier{
@@ -135,4 +171,40 @@
     border-width: 3px;
     border-color: white;
     border-radius: 30px;
+}
+
+.upload-icon-container,
+.apps-icon-container,
+.notif-icon-contanier{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-icon-container .tooltip,
+.apps-icon-container .tooltip,
+.notif-icon-contanier .tooltip{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Roboto;
+    font-size: 20px;
+    bottom: -40px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.apps-icon-container:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.notif-icon-contanier:hover .tooltip{
+    opacity: 1;
 }

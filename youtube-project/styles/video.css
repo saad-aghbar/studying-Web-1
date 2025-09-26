@@ -1,17 +1,8 @@
-.roboto-RR {
-             font-family: "Roboto", sans-serif;
-             font-optical-sizing: auto;
-             font-weight: 90;
-             font-style: normal;
-             font-variation-settings:
-             "wdth" 600;
-         }
-
 .video-grid{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     column-gap: 16px;
-    row-gap: 40px;
+    row-gap: 90px;
 }
 
 
@@ -56,10 +47,10 @@
 }
 
 .video-title{
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 27px;
+    margin-top: 0;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 40px;
     margin-bottom: 12px;
 }
 

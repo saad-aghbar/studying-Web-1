@@ -5,13 +5,29 @@
     left: 0;
     top: 110px;
     width: 145px;
-    z-index: 999;
+    z-index: 2;
+
+}
+
+.sidebar-link {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .sidebar-link img{
-    height: 160px;
     transition: all 0.2s;
-    width: 55px;
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.sidebar-link div{
+    font-family: Roboto;
+    font-size: 19px;
+
 }
 
 .sidebar-link:hover{

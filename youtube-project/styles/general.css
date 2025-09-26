@@ -1,3 +1,12 @@
+.roboto-RR {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 90;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 600;
+}
+
 p {
     font-family: Roboto;
     margin-bottom: 0px;
@@ -7,8 +16,8 @@ p {
 body{
     margin: 0;
     height: 3000px;
-    padding-top: 170px;
+    padding-top: 160px;
     padding-left: 200px;
-    padding-right: 30px;
+    padding-right: 50px;
     background-color: rgb(243, 243, 243);
 }

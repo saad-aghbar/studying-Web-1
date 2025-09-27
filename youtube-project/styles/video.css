@@ -68,6 +68,10 @@
     text-overflow: ellipsis;
 }
 
+.video-title a{
+    color: inherit;
+}
+
 .video-author,
 .video-stats{
     font-size: 23px;
@@ -76,6 +80,10 @@
 
 .video-author{
     margin-bottom: 10px;
+}
+
+.video-author a{
+    color: inherit;
 }
 
 .video-info-grid{

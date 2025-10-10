@@ -1,27 +1,31 @@
 
-
-.container-fluid{
-    background-color: rgb(20, 20, 20);
-    padding-bottom: 200px;
+p{
+    display: inline-block;
 }
 
+#box {
+    position: absolute;   /* required */
+    top: 100px;           /* initial position */
+    right: 275px;          /* initial position */
+    cursor: grab;         /* drag cursor */
+    display: block;       /* inline-block can cause offset issues */
+}
 
-
-.back-plate{
-    background-color: rgba(255, 255, 255, 0.13);
+.back-plate {
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: rgba(50, 50, 50, 0.5  );
     color: white;
-    display: inline-block;
-    position: relative;
     width: 240px;
     height: 400px;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-left: 250px;
-    margin-top: 250px;
-    backdrop-filter: blur(1.3px);
+    backdrop-filter: blur(2.5px);
+    position: relative;  /* keep relative so inner elements are positioned correctly */
 }
+
 .info-music{
     display: flex;
     width: 230px;
@@ -126,7 +130,8 @@
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: 0px;
-    width: 230px;
+    width: 218px;
+    left: 6.7px;
     margin-top: 3px;
     border-radius: 10px;
     height: 8px;
@@ -137,6 +142,7 @@
     border: 1px solid rgba(255, 255, 255, 0.15);
     position: absolute;
     bottom: 0px;
+    left: 6.7px;
     width: 70px;
     margin-top: 3px;
     border-top-left-radius: 10px;
@@ -231,8 +237,9 @@
 .music-Vline{
     flex: 8px;
     position: relative;
-    margin-left: 20px;
+    justify-items: center;
     /*background-color: white;*/
+    display: flex;
 }
 
 .V-line{
@@ -245,6 +252,7 @@
     width: 190px;
     border-radius: 10px;
     height: 5px;
+    margin-left: 20px;
 }
 
 .V-line-fill{

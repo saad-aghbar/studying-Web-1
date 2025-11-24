@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+  <body>
+    <script>
+    const product = {
+      name: 'socks',
+      price: 20
+    };
+    
+    console.log(product);
+    console.log(product.price);
+    
+    product.price = 50;
+    console.log(product.price);
+    
+    product.tax = 0.2;
+    console.log(product);
+    
+    delete product.tax;
+    console.log(product);
+    </script>
+  </body>
+</html>

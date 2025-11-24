@@ -2,19 +2,23 @@
 
 <html>
 <head>
-  <title>Array Loops</title>
-  <style>
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
+  <title>Todo List</title>
+  <link rel="stylesheet" href="todoList.css">
+  <script src = "todo-list.js"></script>
 </head>
   <body>
     <p>Todo List 1</p>
+    <input placeholder="Todo Name" class = "js-todo-name">
+    <button onclick="TodoListInput();">Add</button>
     
-  
-    <script>
+    <p>Todo List 2</p>
+    <div class = "todo-grid">
+      <input placeholder="Todo Name" class = "js-todo2-name todo2-name">
+      <input type = "date" class = "js-todo2-date todo2-date">
+      <button onclick="TodoList2Input();" class = "add-button">Add</button>
+    </div>
     
-    </script>
+    
+    <div class = "js-todo-list-show"></div>
   </body>
 </html>

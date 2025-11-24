@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM-test</title>
+    <style>
+      
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .subs-button{
+        margin: 10px 0 30px 0;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: black;
+        border-radius: 30px;
+        padding: 10px 14px 10px 14px;
+        cursor: pointer;
+      }
+      
+      .is-sub-button{
+        color: black;
+        background-color: rgb(240, 240, 240);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p style="margin-bottom: 5px">Youtube Subscribe Button</p>
+    
+    <button onclick="subscribe();" class = "js-sub-button subs-button">
+      Subscribe
+    </button>
+    
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    
+    <input placeholder = "Cost of Orders" class = "js-cost-input" onkeydown="
+      HandleKeyDown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    
+    <p class = "js-result"></p>
+    
+    
+    <script>
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-sub-button');
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-sub-button');
+        }else{
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-sub-button');
+        }
+      }
+      
+      function calculateTotal() {
+        const inputCost = document.querySelector('.js-cost-input');
+        let cost = Number(inputCost.value);
+        
+        if (cost < 40){
+          cost += 10;
+          showResult(cost);
+        }else if(cost >= 40){
+          showResult(cost);
+        }
+      }
+      
+      function showResult(cost){
+        document.querySelector('.js-result').innerHTML = `$${cost}.`;
+      }
+      
+      function HandleKeyDown(event){
+        if(event.key === 'Enter'){
+          calculateTotal();
+        }
+      }
+    </script>
+  </body>
+</html>

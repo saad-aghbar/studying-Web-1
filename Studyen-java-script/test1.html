@@ -3,50 +3,52 @@
 	<html>
 		<head>
 			<link rel="stylesheet" href="test1.css">
-			<title>js test</title>
+			<title>cart Quantity</title>
 		</head>
 		<body>
 
-			<p>
+			<p class = "header">
 				cart Quantity
 			</p>
-			<button>
+
+			<button onclick="
+				//console.log(cart_Q_name + cart_Quantity);
+				console.log(`cart Quantity: ${cart_Quantity}`);
+			">
 				show quantity
 			</button>
-			<button>
+
+			<button onclick = "
+				cart_Quantity ++;
+				console.log(`cart Quantity: ${cart_Quantity}`);
+			">
 				add to cart
 			</button>
-			<button>
+
+			<button onclick = "
+				cart_Quantity += 2;
+				console.log(`cart Quantity: ${cart_Quantity}`);
+			">
 				+2
 			</button>
-			<button>
+
+			<button onclick = "
+				cart_Quantity += 3;
+				console.log(`cart Quantity: ${cart_Quantity}`);
+			">
 				+3
 			</button>
-			<button>
+
+			<button onclick = "
+				cart_Quantity = 0;
+				console.log('cart was reset.');
+			">
 				reset cart
 			</button>
 
 			<script>
-				let var1 = 3;
-				console.log(var1);
-
-				let cal = 2 + 2;
-				console.log(cal);
-
-				let result = cal + 2;
-				console.log(result);
-
-				let message = 'hello';
-				console.log(message);
-
-				const var2 = 2;
-				console.log(var2);
-
-				var1 = 5;
-				console.log(var1);
-
-				var1 = var1 + 2;
-				console.log(var1);
+          let cart_Quantity = 0;
+          let cart_Q_name = 'cart Quantity: ';
 			</script>
 		</body>
 	</html>

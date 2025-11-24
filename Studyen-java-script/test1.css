@@ -2,4 +2,21 @@ button{
     border: black solid 1px;
     background-color: lightgray;
     border-radius: 3px;
+    margin: 0;
+}
+
+button:hover{
+    background-color: gray;
+    transition: 0.3s;
+}
+
+button:active{
+    background-color: white;
+    transition: 0.3s;
+}
+
+.header{
+    border-bottom: black solid 1px;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
 }

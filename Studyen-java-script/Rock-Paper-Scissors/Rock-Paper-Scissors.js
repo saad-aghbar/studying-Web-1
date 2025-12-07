@@ -20,6 +20,22 @@ function comp_Choise() {
     return compChoise;
 }
 
+let isPlaying = false;
+let intervalId = null;
+
+function PlayAuto(){
+    if(!isPlaying){
+        intervalId = setInterval(() => {
+            const playerMove = comp_Choise();
+            playGame(playerMove);
+        }, 1000);
+        isPlaying = true;
+    }else{
+        clearInterval(intervalId);
+        isPlaying = false;
+    }
+}
+
 function playGame(playerChoise) {
     let compChoise = comp_Choise();
     let result;
@@ -111,21 +127,5 @@ function OnclickAutoPlay(){
         buttonState.innerHTML = 'Stop Playing';
     }else{
         buttonState.innerHTML = 'Auto Play';
-    }
-}
-
-let isPlaying = false;
-let intervalId;
-
-function PlayAuto(){
-    if(!isPlaying){
-        intervalId = setInterval( function(){
-            const playerMove = comp_Choise();
-            playGame(playerMove);
-        }, 1000);
-        isPlaying = true;
-    }else{
-        clearInterval(intervalId);
-        isPlaying = false;
     }
 }
